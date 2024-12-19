@@ -1,0 +1,211 @@
+/* Reset margins and paddings for html and body */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure body takes up the full height of the viewport */
+}
+
+  h1 {
+    text-align: center;
+    margin-top: 50px ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-style: italic;
+    
+    
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 50px ;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  
+  /* Main body styling */
+body {
+  font-family: arial;
+  font-weight: 100;
+  font-size: 14px;
+  background-color: white;
+  animation: lighting 5s infinite;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  position: relative; /* Needed for pseudo-element positioning */
+}
+
+/* Pseudo-element for the background image */
+body::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/alyssa1.png');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(80%);
+  z-index: -1; /* Ensure it stays behind the content */
+}
+
+
+  .container {
+    text-align: center; /* Aligns content in the container to the center */
+}
+
+.center {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.btn-custom {
+  background-color: #8555f7; /* Replace with your desired color */
+  color: white; /* Adjust text color for contrast */
+  border: none; /* Optional: remove borders */
+  padding: 10px 20px; /* Optional: adjust button padding */
+  border-radius: 5px; /* Optional: add rounded corners */
+  text-decoration: none; /* Remove underline for links */
+}
+
+.btn-custom:hover {
+  background-color: #7137f6; /* Darken color on hover */
+  color: white; /* Maintain contrast on hover */
+}
+
+
+
+
+
+
+
+  
+  
+  .right {
+    float: right;
+    position: relative;
+    top: 6px;
+  }
+  
+  .top {
+    margin-top: -40px;
+  }
+  
+  #notebooks {
+    /* Initial styles */
+    background-color: rgba(255, 255, 255, 0.75); /* White color with 50% opacity */
+
+    position: absolute;
+    left: 50%;
+    margin-left: -225px; /* This margin keeps it centered initially */
+    margin-top: 35px;
+    width: 450px; /* Initial width */
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 0 white;
+    max-height: 550px;
+}
+  
+  
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    max-height: 390px;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 5px 0 5px;
+    border-left: none;
+    border-right: none;
+  }
+  
+  li {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    background-image: 
+      linear-gradient(
+        90deg,
+        black 10px,
+        #EEE 10px,
+        #EEE 11px,
+        transparent 11px);
+    padding: 10px 15px 10px 25px;
+    border: 1px solid #CCC;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+  }
+
+ 
+  
+  #query {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 19px;
+    padding: 5px;
+    font-family: calibri light;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  
+
+  
+  #notebooks select {
+    width: 120px;
+    margin-left: 230px;
+    margin-top: -45px;
+    border-radius: 0 3px 3px 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    padding: 7.5px;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  #notebooks select:focus, #query:focus {
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
+    outline: none;
+  }
+
+  .modaltitle {
+    text-align: center;
+  }
+
+ 
+
+
+
+  @media (max-width: 768px) {
+    #notebooks {
+        width: 65%; /* Adjust the width for screens smaller than 768px */
+        margin-left: -32.5%; /* Center horizontally at smaller screen sizes */
+    }
+}
+
+@media (max-width: 480px) {
+    #notebooks {
+        width: 70%; /* Adjust the width for screens smaller than 480px */
+        margin-left: -35%; /* Center horizontally at smaller screen sizes */
+    }
+}
+
+@media (max-width: 768px) {
+    #notebooks span {
+        width: 100%; /* Adjust the width for screens smaller than 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    #notebooks span {
+        width: 70%; /* Adjust the width for screens smaller than 480px */
+    }
+}
